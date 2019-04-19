@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="menuHowToAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="478.0" style="-fx-background-color: #C8C5C5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.games.Hangman.MenuController">
+   <children>
+      <Label layoutX="182.0" layoutY="23.0" text="How To Play">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text layoutX="47.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hangman is a guessing game for two or more players. One player thinks of a word and the other(s) tries to guess it by suggesting letters, within a certain number of guesses. If the player makes enough incorrect guesses to allow his opponent to complete the diagram, the game is over with the guesser losing. However, the guesser can win by guessing all the letters that appear in the word, thereby completing the word, before the diagram is completed. Last but not least, there is an option with which the player can guess the whole word but if he doesn't guess it correctly he immediately loses even if he has guesses left!&#10;" textAlignment="JUSTIFY" wrappingWidth="384.13671875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <MaterialDesignIconView fx:id="returnButton" glyphName="KEYBOARD_RETURN" layoutX="14.0" layoutY="40.0" onMouseClicked="#handleReturnButton" size="30" />
+   </children>
+</AnchorPane>

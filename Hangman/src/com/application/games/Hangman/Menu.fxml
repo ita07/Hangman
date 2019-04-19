@@ -33,10 +33,10 @@
             <OctIconView glyphName="INFO" size="25" wrappingWidth="22.875" />
          </graphic>
       </JFXButton>
-      <OctIconView glyphName="X" layoutX="363.0" layoutY="23.0" onMouseClicked="#handleXIcon" size="30" fx:id="xIcon" />
-      <Label fx:id="menuTitle" layoutX="138.0" layoutY="-5.0" text="Hangman">
+      <OctIconView glyphName="X" layoutX="364.0" layoutY="31.0" onMouseClicked="#handleXIcon" size="30" fx:id="xIcon" />
+      <Label fx:id="menuTitle" layoutX="130.0" layoutY="-1.0" text="Hangman">
          <font>
-            <Font name="System Bold" size="27.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
    </children>
