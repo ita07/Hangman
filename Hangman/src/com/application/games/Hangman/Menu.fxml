@@ -3,12 +3,13 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #C8C5C5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.games.Hangman.MenuController">
+<AnchorPane fx:id="menuAnchor" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #C8C5C5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.games.Hangman.MenuController">
    <children>
-      <JFXButton layoutX="156.0" layoutY="46.0" text="Start">
+      <JFXButton fx:id="startButton" layoutX="156.0" layoutY="46.0" onAction="#handleStartButton" text="Start">
          <font>
             <Font size="18.0" />
          </font>
@@ -16,7 +17,7 @@
             <OctIconView glyphName="MILESTONE" size="25" />
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="127.0" layoutY="106.0" text="How to play">
+      <JFXButton fx:id="howToPlayButton" layoutX="127.0" layoutY="106.0" onAction="#handleHowToPlayButton" text="How to play">
          <font>
             <Font size="18.0" />
          </font>
@@ -24,7 +25,7 @@
             <MaterialDesignIconView glyphName="HELP" size="25" wrappingWidth="20.0" />
          </graphic>
       </JFXButton>
-      <JFXButton layoutX="150.0" layoutY="167.0" text="About">
+      <JFXButton fx:id="aboutButton" layoutX="150.0" layoutY="167.0" onAction="#handleAboutButton" text="About">
          <font>
             <Font size="18.0" />
          </font>
@@ -32,6 +33,11 @@
             <OctIconView glyphName="INFO" size="25" wrappingWidth="22.875" />
          </graphic>
       </JFXButton>
-      <OctIconView glyphName="X" layoutX="364.0" layoutY="31.0" size="30" />
+      <OctIconView glyphName="X" layoutX="363.0" layoutY="23.0" onMouseClicked="#handleXIcon" size="30" fx:id="xIcon" />
+      <Label fx:id="menuTitle" layoutX="138.0" layoutY="-5.0" text="Hangman">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
