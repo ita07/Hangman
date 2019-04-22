@@ -18,8 +18,10 @@ import javafx.stage.Stage;
 
 public class MenuController {
 	
-	private double xOffset = 0;
-    private double yOffset = 0;    
+	AddingScenes addScene = new AddingScenes();
+	DraggableWindow dragWindow = new DraggableWindow();
+	//private double xOffset = 0;
+    //private double yOffset = 0;    
     @FXML
     private AnchorPane menuAnchor, menuHowToAnchor;
     
@@ -38,35 +40,16 @@ public class MenuController {
     
 
     @FXML
-    void handleAboutButton(ActionEvent event) throws IOException{
+    void handleAboutButton(ActionEvent event){
     	
-    	Parent menuHowTo = FXMLLoader.load(getClass().getResource("MenuHowTo.fxml"));
-    	Scene sceneHowTo = new Scene(menuHowTo);
-    	Stage window = Main.getPrimaryStage();
-    	window.setScene(sceneHowTo);	
-
-    }
-    
-    @FXML
-    void handleReturnButton(MouseEvent event) {
-		try {
-			Parent menu;
-			menu = FXMLLoader.load(getClass().getResource("Menu.fxml"));
-			Scene sceneMenu = new Scene(menu);
-			Stage window = Main.getPrimaryStage();
-	    	window.setScene(sceneMenu);				
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     	
-
     }
-		
 
     @FXML
-    void handleHowToPlayButton(ActionEvent event) {
-    
+    void handleHowToPlayButton(ActionEvent event) throws IOException {
+    	
+    	addScene.sceneCreation("MenuHowTo.fxml");
+
     }
 
     @FXML
@@ -81,15 +64,12 @@ public class MenuController {
     
     @FXML
     void handleMouseDragged(MouseEvent event) {
-    	Stage stage = (Stage) menuAnchor.getScene().getWindow();
-    	stage.setX(event.getScreenX() - xOffset);
-        stage.setY(event.getScreenY() - yOffset);
+    	dragWindow.onWindowDragged(menuAnchor, event);
     }
 
     @FXML
     void handleMousePressed(MouseEvent event) {
-    	xOffset = event.getSceneX();
-        yOffset = event.getSceneY();
+    	dragWindow.onWindowPressed(event);
     }
     
 
