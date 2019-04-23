@@ -8,7 +8,7 @@
 
 <AnchorPane fx:id="menuHowToAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="272.0" prefWidth="478.0" style="-fx-background-color: #C8C5C5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.games.Hangman.MenuHowToController">
    <children>
-      <Label layoutX="182.0" layoutY="23.0" text="How To Play">
+      <Label layoutX="177.0" layoutY="14.0" text="How To Play">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
@@ -18,6 +18,6 @@
             <Font size="13.0" />
          </font>
       </Text>
-      <MaterialDesignIconView fx:id="returnButton" glyphName="KEYBOARD_RETURN" layoutX="14.0" layoutY="40.0" onMouseClicked="#handleReturnButton" size="30" />
+      <MaterialDesignIconView fx:id="returnButton" glyphName="KEYBOARD_RETURN" layoutX="14.0" layoutY="42.0" onMouseClicked="#handleReturnButton" size="30" text="" />
    </children>
 </AnchorPane>

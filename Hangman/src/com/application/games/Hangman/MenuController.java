@@ -8,22 +8,17 @@ import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import de.jensd.fx.glyphs.octicons.OctIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 public class MenuController {
 	
 	AddingScenes addScene = new AddingScenes();
 	DraggableWindow dragWindow = new DraggableWindow();
-	//private double xOffset = 0;
-    //private double yOffset = 0;    
+  
     @FXML
-    private AnchorPane menuAnchor, menuHowToAnchor;
+    private AnchorPane menuAnchor;
     
 	@FXML
     private Label menuTitle;
@@ -40,9 +35,9 @@ public class MenuController {
     
 
     @FXML
-    void handleAboutButton(ActionEvent event){
+    void handleAboutButton(ActionEvent event) throws IOException{
     	
-    	
+    	addScene.sceneCreation("MenuAbout.fxml");
     }
 
     @FXML
