@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+//Changes scenes using the same stage for every part of the application
 public class AddingScenes {
 	
 	public void sceneCreation(String fxmlScene) throws IOException {

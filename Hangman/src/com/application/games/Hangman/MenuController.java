@@ -48,8 +48,10 @@ public class MenuController {
     }
 
     @FXML
-    void handleStartButton(ActionEvent event) {
-
+    void handleStartButton(ActionEvent event) throws IOException {
+    	
+    	addScene.sceneCreation("WordInput.fxml");
+    	
     }
     
     @FXML

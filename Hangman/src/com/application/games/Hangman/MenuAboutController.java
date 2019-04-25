@@ -26,6 +26,7 @@ public class MenuAboutController {
     private Hyperlink aboutHyperlink;
     
     @FXML
+    //Points to github profile and opens it with defauly browser if there is a desktop
     void handleLinkClick(ActionEvent event) {
     	
     	if (Desktop.isDesktopSupported()) {
@@ -39,6 +40,7 @@ public class MenuAboutController {
     }
     
     @FXML
+    
     void handleMouseDragged(MouseEvent event) {
     	
     	dragWindow.onWindowDragged(menuAboutAnchor, event);
@@ -51,7 +53,7 @@ public class MenuAboutController {
     	dragWindow.onWindowPressed(event);
 
     }
-
+    
     @FXML
     void handleReturnButton(MouseEvent event) throws IOException {
     	
