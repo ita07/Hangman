@@ -26,7 +26,7 @@ public class MenuAboutController {
     private Hyperlink aboutHyperlink;
     
     @FXML
-    //Points to github profile and opens it with defauly browser if there is a desktop
+    //Points to github profile and opens it with default browser if there is a desktop
     void handleLinkClick(ActionEvent event) {
     	
     	if (Desktop.isDesktopSupported()) {
