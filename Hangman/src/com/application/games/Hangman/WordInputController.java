@@ -25,7 +25,7 @@ public class WordInputController {
 	
 	AddingScenes addScene = new AddingScenes();
 	DraggableWindow dragWindow = new DraggableWindow();
-	String wordToGuess;
+	private static String wordToGuess;
 	
     @FXML
     private AnchorPane wordInputAnchor;
@@ -120,5 +120,9 @@ public class WordInputController {
     	addScene.sceneCreation("Menu.fxml");
     	
     }
+    
+	public String getWordToGuess() {
+		return wordToGuess;
+	}
 
 }
