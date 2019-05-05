@@ -15,7 +15,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
@@ -67,6 +66,7 @@ public class WordInputController {
         });
         //Add the textfield to the anchorpane of the fxml
         wordInputAnchor.getChildren().add(textField);
+        
     }
     
     @FXML
@@ -110,8 +110,20 @@ public class WordInputController {
 
     @FXML
     void handleSubmitButton(ActionEvent event) throws IOException {
-    	wordToGuess = textField.getText();
-    	addScene.sceneCreation("MainGame.fxml");
+    	if (textField.getLength() > 2) {
+        	submitButton.setDisable(false);
+        	wordToGuess = textField.getText();
+        	addScene.sceneCreation("MainGame.fxml");
+        } else {
+        	Alert alert = new Alert(AlertType.ERROR);
+        	alert.initOwner(Main.getPrimaryStage());
+        	alert.setHeaderText(null);
+        	alert.setTitle("Error occured!");
+        	alert.setContentText("Enter 3 or more letter words for the game to start!");
+        	alert.showAndWait();
+
+        }
+    	
     }
     
     @FXML

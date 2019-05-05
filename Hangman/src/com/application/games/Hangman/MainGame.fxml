@@ -36,7 +36,7 @@
             <Font size="27.0" />
          </font>
       </Label>
-      <Text fx:id="wordToGuess" layoutX="94.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="728.13671875">
+      <Text fx:id="textWord" layoutX="94.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="728.13671875">
          <font>
             <Font size="27.0" />
          </font>
