@@ -91,7 +91,7 @@ public class WordInputController {
     void handleRandomWordButton(ActionEvent event) throws FileNotFoundException, IOException {
     	ArrayList<String> arrayList = new ArrayList<String>();
     	Random randomIndex = new Random();
-    	String filename = "src/com/application/games/Hangman/Wordlist.txt";
+    	String filename = "src/com/application/games/Hangman/resources/Wordlist.txt";
     	FileReader fileReader = new FileReader(filename);
 		
     	//Wrap a BufferedReader around the FileReader
